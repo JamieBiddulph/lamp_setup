@@ -110,11 +110,11 @@ Alias /phpmyadmin /usr/share/phpMyAdmin
 	</IfModule>
 	</Directory>
 
-													# These directories do not require access over HTTP - taken from the original
-													# phpMyAdmin upstream tarball
-													#
-													<Directory /usr/share/phpMyAdmin/libraries/>
-													    Order Deny,Allow
+# These directories do not require access over HTTP - taken from the original
+# phpMyAdmin upstream tarball
+#
+	<Directory /usr/share/phpMyAdmin/libraries/>
+	Order Deny,Allow
 	Deny from All
 	Allow from None
     </Directory>
