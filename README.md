@@ -16,5 +16,8 @@ Configuration:-
 -  SELinux is set to permissive mode
 -  phpMyAdmin is NOT restricted by IP address
 
+Use:-
 
+-  Clone this repository to your new CentOS installation
+-  As the root user, run the "centos7_lamp_setup.sh" script
 
