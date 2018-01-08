@@ -5,6 +5,7 @@ For use with CentOS, Tested with CentOS 7
 
 PHP modules installed for use with Moodle.
 
+
 Included as a part of the script is:-
 
 -  PHP 7
@@ -15,6 +16,10 @@ Configuration:-
 
 -  SELinux is set to permissive mode
 -  phpMyAdmin is NOT restricted by IP address
+
+Prerequisites:-
+
+- Git should be installed on the host machine so this script can be cloned
 
 Use:-
 
