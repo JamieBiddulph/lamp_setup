@@ -39,7 +39,7 @@ firewall-cmd --reload
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 #Install php7 & modules
-yum install -y php70w php70w-opcache php70w-mysql php70w-pear php70w-xmlrpc php70w-common php70w-devel php70w-intl php70w-ldap php70w-mbstring php70w-gd php70w-xml php70w-soap
+yum install -y php71w php71w-opcache php71w-mysql php71w-pear php71w-xmlrpc php71w-common php71w-devel php71w-intl php71w-ldap php71w-mbstring php71w-gd php71w-xml php71w-soap
 
 
 #Set SElinx to permissive
