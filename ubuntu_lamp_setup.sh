@@ -52,8 +52,9 @@ echo "------Starting apache------"
 #create database for moodle
 read -p "Enter mysql root user: " dbuser
 read -p "Enter mysql root password: " dbpass
+read -p "Enter database name: " dbname
 echo "------Creating database------"
-mysql -u $dbuser -p$dbpass -Bse "SET GLOBAL innodb_large_prefix = 1;SET GLOBAL innodb_file_per_table = 1;SET GLOBAL innodb_file_format = barracuda;CREATE DATABASE moodle DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysql -u $dbuser -p$dbpass -Bse "SET GLOBAL innodb_large_prefix = 1;SET GLOBAL innodb_file_per_table = 1;SET GLOBAL innodb_file_format = barracuda;CREATE DATABASE $dbname DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 #show database back to user
 echo "------Successfully created database------"
-mysql -u $dbuser -p$dbpass -Bse "SHOW DATABASES;" | grep moodle
+mysql -u $dbuser -p$dbpass -Bse "SHOW DATABASES;" | grep $dbname
