@@ -49,3 +49,9 @@ sed -ie 's/30/60/g' /etc/php/7.2/apache2/php.ini
 #starting apache2
 echo "------Starting apache------"
 /etc/init.d/apache2 start
+#create database for moodle
+read "Enter mysql root user: " dbuser
+read "Enter mysql root password: " dbpass
+echo "------Creating database------"
+mysql -u $dbuser -p$dbpass -Bse "SET GLOBAL innodb_large_prefix = 1;SET GLOBAL innodb_file_per_table = 1;SET GLOBAL innodb_file_format = barracuda;CREATE DATABASE moodle DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
