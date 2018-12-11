@@ -10,7 +10,7 @@ Use cases:-
 -  Quick setup for Virtual machine testing
 -  Creating base images for docker
 
-Scripts provided;
+Scripts provided:-
 
 -  ubuntu_lamp_setup.sh (Recommended for Moodle 3.4 onwards)
     - MariaDB 10.2 (Latest)
