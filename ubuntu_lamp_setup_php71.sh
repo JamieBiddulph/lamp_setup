@@ -38,7 +38,7 @@ add-apt-repository ppa:ondrej/php
 apt-get update
 #installing php72 and required extensions
 echo "------Installing php and required extensions------"
-apt-get install -y php7.1 php7.1-mysqlnd php7.1-intl php7.1-gd php7.1-xml php7.1-zip php7.1-mbstring php7.1-soap php7.1-xmlrpc php7.1-ldap
+apt-get install -y php7.1 php7.1-mysqlnd php7.1-intl php7.1-gd php7.1-xml php7.1-zip php7.1-mbstring php7.1-soap php7.1-xmlrpc php7.1-ldap php7.1-curl
 #tweak php.ini for apache
 #set post_max_size to 500M
 sed -ie 's/8M/500M/g' /etc/php/7.1/apache2/php.ini
