@@ -38,3 +38,10 @@ sed -ie 's/;opcache.revalidate_freq=2/opcache.revalidate_freq=60/g' /etc/php/7.2
 #starting apache2
 echo "------Starting apache------"
 /etc/init.d/apache2 start
+#create cron file
+echo "* * * * *  /bin/bash /var/www/cron.sh" > /etc/cron.d/moodle
+echo "#!/bin/bash
+/usr/bin/php7.2 /var/www/html/admin/cli/cron.php" > /var/www/cron.sh
+chmod 755 /var/www/cron.sh
+/etc/init.d/cron start
+crontab /etc/cron.d/moodle

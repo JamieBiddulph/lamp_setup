@@ -60,3 +60,10 @@ mysql -u $dbuser -p$dbpass -Bse "SET GLOBAL innodb_large_prefix = 1;SET GLOBAL i
 #show database back to user
 echo "------Successfully created database------"
 mysql -u $dbuser -p$dbpass -Bse "SHOW DATABASES;" | grep $dbname
+#create cron file
+echo "* * * * *  /bin/bash /var/www/cron.sh" > /etc/cron.d/moodle
+echo "#!/bin/bash
+/usr/bin/php7.3 /var/www/html/admin/cli/cron.php" > /var/www/cron.sh
+chmod 755 /var/www/cron.sh
+/etc/init.d/cron start
+crontab /etc/cron.d/moodle
