@@ -7,7 +7,7 @@ apt-get update
 echo "------Upgrading packages------"
 apt-get upgrade
 #install git, vim, zip, wget, net-tools, unzip
-apt-get -y install git vim zip wget net-tools unzip 
+apt-get -y install git vim zip wget net-tools unzip software-properties-common
 #Install MySQL
 echo "------Installing MySQL server & client------"
 apt install -y mysql-server mysql-client
@@ -39,6 +39,8 @@ sed -ie 's/8M/500M/g' /etc/php/7.2/apache2/php.ini
 sed -ie 's/2M/500M/g' /etc/php/7.2/apache2/php.ini
 #set max_execution to 60 seconds
 sed -ie 's/30/60/g' /etc/php/7.2/apache2/php.ini
+#set memory_limit to 128M
+sed -ie 's/12500/128M/g' /etc/php/7.2/apache2/php.ini
 #set opcache revalidate frequencey to 60
 sed -ie 's/;opcache.revalidate_freq=2/opcache.revalidate_freq=60/g' /etc/php/7.2/apache2/php.ini
 #starting apache2
