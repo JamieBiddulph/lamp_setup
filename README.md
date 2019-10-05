@@ -33,7 +33,3 @@ How to use:-
 
 -  Copy RAW text into bash script on the LAMP host (or clone from git)
 -  As the root user run the script and enter details when prompted
-
-Issues & Requests:-
-
--  Please report any issues or requests in Git - https://github.com/JamieBiddulph/lamp_setup/issues
