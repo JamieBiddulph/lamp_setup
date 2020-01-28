@@ -32,11 +32,11 @@ apt-get update
 #install apache
 echo "------Installing apache2------"
 apt-get install -y apache2
-#add php72 ppa https://launchpad.net/%7Eondrej/+archive/ubuntu/php
+#add php73 ppa https://launchpad.net/%7Eondrej/+archive/ubuntu/php
 echo "------Adding php ppa------" 
 add-apt-repository ppa:ondrej/php
 apt-get update
-#installing php72 and required extensions
+#installing php73 and required extensions
 echo "------Installing php and required extensions------"
 apt-get install -y php7.3 php7.3-mysqlnd php7.3-intl php7.3-gd php7.3-xml php7.3-zip php7.3-mbstring php7.3-soap php7.3-xmlrpc php7.3-ldap php7.3-curl
 #tweak php.ini for apache
