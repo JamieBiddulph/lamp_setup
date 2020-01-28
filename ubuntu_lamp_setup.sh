@@ -38,18 +38,18 @@ add-apt-repository ppa:ondrej/php
 apt-get update
 #installing php72 and required extensions
 echo "------Installing php and required extensions------"
-apt-get install -y php7.2 php7.2-mysqlnd php7.2-intl php7.2-gd php7.2-xml php7.2-zip php7.2-mbstring php7.2-soap php7.2-xmlrpc php7.2-ldap php7.2-curl
+apt-get install -y php7.3 php7.3-mysqlnd php7.3-intl php7.3-gd php7.3-xml php3.2-zip php7.3-mbstring php7.3-soap php7.3-xmlrpc php7.3-ldap php7.3-curl
 #tweak php.ini for apache
 #set post_max_size to 500M
-sed -ie 's/8M/500M/g' /etc/php/7.2/apache2/php.ini
+sed -ie 's/8M/500M/g' /etc/php/7.3/apache2/php.ini
 #set upload_max_filesize to 500M
-sed -ie 's/2M/500M/g' /etc/php/7.2/apache2/php.ini
+sed -ie 's/2M/500M/g' /etc/php/7.3/apache2/php.ini
 #set max_execution to 60 seconds
-sed -ie 's/30/60/g' /etc/php/7.2/apache2/php.ini
+sed -ie 's/30/60/g' /etc/php/7.3/apache2/php.ini
 #set memory_limit to 128M
-sed -ie 's/12500/128/g' /etc/php/7.2/apache2/php.ini
+sed -ie 's/12500/128/g' /etc/php/7.3/apache2/php.ini
 #set opcache revalidate frequencey to 60
-sed -ie 's/;opcache.revalidate_freq=2/opcache.revalidate_freq=60/g' /etc/php/7.2/apache2/php.ini
+sed -ie 's/;opcache.revalidate_freq=2/opcache.revalidate_freq=60/g' /etc/php/7.3/apache2/php.ini
 #starting apache2
 echo "------Starting apache------"
 /etc/init.d/apache2 start
